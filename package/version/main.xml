@@ -1,1 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><packages><package><package>EBBA</package><versions><version><version>0001</version><link>https://www.sorgera.com/package/version/ebba/1.xml</link></version><version><version>0002</version><link>https://www.sorgera.com/package/version/ebba/2.xml</link></version></versions></package><package><package>EBCR</package><versions><version><version>0001</version><link>https://www.sorgera.com/package/version/ebcr/1.xml</link></version><version><version>0002</version><link>https://www.sorgera.com/package/version/ebcr/2.xml</link></version><version><version>0003</version><link>https://www.sorgera.com/package/version/ebcr/3.xml</link></version></versions></package><package><package>EBK1</package><versions><version><version>0001</version><link>https://www.sorgera.com/package/version/ebk1/1.xml</link></version><version><version>0002</version><link>https://www.sorgera.com/package/version/ebk1/2.xml</link></version><version><version>0003</version><link>https://www.sorgera.com/package/version/ebk1/3.xml</link></version></versions></package></packages>
+<?xml version="1.0" encoding="utf-8"?>
+<packages>
+	<package>
+		<package>EBCR</package>
+		<versions>
+			<version>
+				<version>0001</version>
+				<link>https://www.sorgera.com/package/version/ebcr/ebcr_0001.zip</link>
+			</version>
+		</versions>
+	</package>
+</packages>
