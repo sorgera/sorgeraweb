@@ -394,7 +394,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         right: -50%;
         top: 0;
         background-color: #bd2f2c;
-        width: 250px;
+        width: 310px;
         -webkit-box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
         box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
         -webkit-transform: translateY(15px) translateX(50%);
