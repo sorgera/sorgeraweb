@@ -66,6 +66,56 @@
 		gtag('config', 'UA-37106447-2');
 	</script>
 
+	<style>
+		.panel-heading a {
+			display: block;
+			position: relative;
+			font-weight: bold;
+
+			&::after {
+				content: "";
+				border: solid #bd2f2c;
+				border-width: 0 3px 3px 0;
+				display: inline-block;
+				padding: 3px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transform: rotate(45deg);
+			}
+
+			&[aria-expanded="true"]::after {
+				transform: rotate(-135deg);
+				top: 5px;
+			}
+		}
+
+		/* Genel liste stilini varsayılana döndürmek için */
+		ul {
+			list-style-type: disc;
+			padding-left: 20px;
+			/* Bullet'ların metinden ayrılması için */
+		}
+
+		/* Her bir liste öğesinin başlığını ve içeriğini ayırmak için */
+		section ul li {
+			margin-bottom: 10px;
+			/* Her madde arasına biraz boşluk bırakır */
+			/* Gerekirse, burada başka stil ayarları da yapılabilir */
+		}
+
+		/* Liste öğesindeki kalın metni (başlığı) düz metinden ayırıp yeni satıra geçirmek için */
+		section ul li strong {
+			display: block;
+			/* Kalın metni blok seviyesi yapar, altındaki metni yeni satıra atar */
+			margin-bottom: 5px;
+			/* Kalın metin ile altındaki açıklama arasına boşluk bırakır */
+			font-size: 1em;
+			/* Varsayılan yazı boyutu (isteğe bağlı, gerekirse değiştirin) */
+			color: #333;
+			/* Başlık rengi (isteğe bağlı) */
+		}
+	</style>
 </head>
 
 <body>
@@ -194,7 +244,7 @@
 				<!-- Main -->
 				<main id="main" class="col-md-9">
 					<div class="blog">
-						<div class="blog-content" style="padding-top: 0px; margin;padding-bottom: 0px;">
+						<div class="blog-content" style="padding-top: 0px; padding-bottom: 0px;">
 							<article>
 								<header>
 									<header>
@@ -205,7 +255,7 @@
 										security standards and user-friendly interface.</p>
 									</header>
 									<figure class="blog-img">
-										<img class="img-responsive" src="../img/banner_ebeyanname.png"
+										<img class="img-responsive" src="../img/banner_edeclaration.png"
 											alt="SAP entegrasyonlu GİB e-Beyanname çözümü tanıtım görseli">
 									</figure>
 									<section>
@@ -258,202 +308,199 @@
 						</div>
 						<div class="container col-md-12">
 							<br />
-							<h3>FAQ - Frequently Asked Questions</h1>
-								<div class="content">
-									<div class="panel-group" id="accordion">
-										<div class="panel panel-default">
-											<div class="panel-heading ">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseOne">What is the new e-declaration web service
-														infrastructure of the Revenue Administration?</a>
-												</h2>
-											</div>
-											<div id="collapseOne" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<strong>RA (The Revenue Administration)</strong> has
-															introduced a new infrastructure that allows declarations to
-															be submitted not only through the Beyanname Düzenleme
-															Programı (BDP), but now <strong>directly via web
-																services.</strong> In this way, declarations can be
-															transmitted to the RA with cross-system integration.
-														</div>
+							<h3>FAQ - Frequently Asked Questions</h3>
+							<div class="content">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading ">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseOne">What is the new e-declaration web service
+													infrastructure of the Revenue Administration?</a>
+											</h2>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<strong>RA (The Revenue Administration)</strong> has introduced a new infrastructure that allows declarations to be submitted not only through the Beyanname Düzenleme Programı (BDP), but now  <strong>directly via web services.</strong> In this way, declarations can be transmitted to the RA with cross-system integration.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseTwo">Is your existing <strong>SAP e-declaration
-															solution</strong> compatible with this infrastructure?</a>
-												</h2>
-											</div>
-											<div id="collapseTwo" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															Yes. Our solution, which works integrated with
-															<strong>SAP</strong>, has been made 100% compatible with the
-															new web service architecture announced by the RA.
-															<strong>Declarations</strong> can now be sent directly to RA
-															from SAP.
-														</div>
+									</div>
+
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseTwo">Is your existing <strong>SAP e-declaration
+														solution</strong> compatible with this infrastructure?</a>
+											</h2>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														Yes. Our solution, which works integrated with
+														<strong>SAP</strong>, has been made 100% compatible with the
+														new web service architecture announced by the RA.
+														<strong>Declarations</strong> can now be sent directly to RA
+														from SAP.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseThree">Is it mandatory to use BDP with the new
-														system?
-												</h2>
-											</div>
-											<div id="collapseThree" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															No. <strong>Thanks to the web service infrastructure, the
-																BDP obligation is eliminated. Our system enables
-																declaration submission directly through SAP without the
-																need for BDP.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseThree">Is it mandatory to use BDP with the new
+													system? </a>
+											</h2>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														No. Thanks to the web service infrastructure, the
+															BDP obligation is eliminated. Our system enables
+															declaration submission directly through SAP without the
+															need for BDP.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFour">Which <strong>declarations</strong> are
-														supported?</a>
-												</h2>
-											</div>
-											<div id="collapseFour" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<strong>All declarations for which web service support is
-																provided by RA are supported in our system</strong>.
-															As the list is updated by the RA, our solution is
-															synchronized.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseFour">Which <strong>declarations</strong> are
+													supported?</a>
+											</h2>
+										</div>
+										<div id="collapseFour" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<strong>All declarations for which web service support is
+															provided by RA are supported in our system</strong>.
+														As the list is updated by the RA, our solution is
+														synchronized.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseFive">How does the system react to incorrect
-														declaration submissions?</a>
-												</h2>
-											</div>
-											<div id="collapseFive" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<strong>Incorrect declarations are detected instantly in the
-																system with the web service responses of RA</strong>.
-															<strong>These errors can be easily viewed from within SAP
-																and necessary corrections can be made and resubmitted.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseFive">How does the system react to incorrect
+													declaration submissions?</a>
+											</h2>
+										</div>
+										<div id="collapseFive" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<strong>Incorrect declarations are detected instantly in the
+															system with the web service responses of RA</strong>.
+														These errors can be easily viewed from within SAP
+															and necessary corrections can be made and resubmitted.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseSix">Will this solution provide time/cost
-														advantages?</a>
-												</h2>
-											</div>
-											<div id="collapseSix" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															Absolutely. <strong>Saves time by eliminating manual
-																operations and dependency on external programs</strong>.
-															It also reduces the risk of operational errors and increases
-															user productivity.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseSix">Will this solution provide time/cost
+													advantages?</a>
+											</h2>
+										</div>
+										<div id="collapseSix" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														Absolutely. <strong>Saves time by eliminating manual
+															operations and dependency on external programs</strong>.
+														It also reduces the risk of operational errors and increases
+														user productivity.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseSeven">How does the transition process work?</a>
-												</h2>
-											</div>
-											<div id="collapseSeven" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">Installation and initial configuration is
-															<strong>carried out by us</strong>. <strong>After the RA
-																test environment integrations are completed, the live
-																use phase begins. Technical support is provided
-																throughout the process.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseSeven">How does the transition process work?</a>
+											</h2>
+										</div>
+										<div id="collapseSeven" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">Installation and initial configuration is
+														<strong>carried out by us</strong>. After the RA
+															test environment integrations are completed, the live
+															use phase begins. Technical support is provided
+															throughout the process.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseEight"><strong>How does the system work in terms
-															of security?</a>
-												</h2>
-											</div>
-											<div id="collapseEight" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															<strong>Fully compliant with the digital certificate, IP
-																restriction and authentication processes set by
-																RA</strong>.
-															<strong>All transactions from within SAP are logged and
-																subject to authorization controls</strong>.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion"
+													href="#collapseEight">
+													<strong>How does the system work in terms of security?</strong>
+												</a>
+											</h2>
+										</div>
+										<div id="collapseEight" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														<strong>Fully compliant with the digital certificate, IP
+															restriction and authentication processes set by
+															RA</strong>.
+														<strong>All transactions from within SAP are logged and
+															subject to authorization controls</strong>.
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h2 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion"
-														href="#collapseNine">Does the system support non-SAP
-														transactions?</a>
-												</h2>
-											</div>
-											<div id="collapseNine" class="panel-collapse collapse">
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-md-12">
-															The main solution is designed to work within SAP, but custom
-															solutions can also be offered for data ingestion from
-															non-SAP sources or integrated use with other systems.
-														</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h2 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+													Does the system support <strong>non-SAP transactions</strong>?
+												</a>
+											</h2>
+										</div>
+										<div id="collapseNine" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-12">
+														The main solution is designed to work within SAP, but custom
+														solutions can also be offered for data ingestion from
+														non-SAP sources or integrated use with other systems.
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
 						</div>
 					</div>
 					<!-- Contact -->
