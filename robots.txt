@@ -1,5 +1,9 @@
 User-agent: *
-Disallow: /fonts/
-Disallow: /css/
-Disallow: /js/
-https://www.sorgera.com/example.com/sitemap.xml
+Disallow: /admin/
+Disallow: /test/
+
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
+Sitemap: https://www.sorgera.com/sitemap.xml
