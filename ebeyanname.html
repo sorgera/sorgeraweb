@@ -147,6 +147,54 @@
 			color: #333;
 			/* Başlık rengi (isteğe bağlı) */
 		}
+
+		.carousel-container {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+		}
+
+		.carousel-track {
+			display: flex;
+			transition: transform 1s ease-in-out;
+		}
+
+		.carousel-item {
+			min-width: 25%;
+			/* Masaüstü: 4 logo */
+			box-sizing: border-box;
+			padding: 15px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.carousel-item img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			max-height: 80px;
+			object-fit: contain;
+		}
+
+		/* Tablet ve mobil cihazlar için responsive tasarım */
+
+		/* Tablet (768px ile 1024px arası ekranlar) */
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.carousel-item {
+				min-width: 33.3333%;
+				/* Tablet: 3 logo (100% / 3) */
+			}
+		}
+
+		/* Mobil cihazlar (768px ve altı) */
+		@media (max-width: 768px) {
+			.carousel-item {
+				min-width: 100%;
+				/* Mobil: 1 logo (100% / 1) */
+			}
+		}
 	</style>
 
 	<!-- Google tag (gtag.js) -->
@@ -659,7 +707,6 @@
 									</div>
 								</div>
 								<!-- /contact -->
-
 								<!-- contact -->
 								<div class="col-sm-3">
 									<div class="contact">
@@ -704,7 +751,43 @@
 									</form>
 								</div>
 								<!-- /contact form -->
-
+								<div class="section-header text-center">
+									<h2 class="title">Referanslarımız</h2>
+								</div>
+								<div class="carousel-container">
+									<div class="carousel-track">
+										<div class="carousel-item">
+											<img src="./img/mavi-jeans-logo.jpg" alt="Mavi Jeans Logo">
+										</div>
+										<div class="carousel-item">
+											<img src="./img/Gratis-logo-big.svg.png" alt="Gratis Logo">
+										</div>
+										<div class="carousel-item">
+											<img src="./img/petrol-ofisi-logo.png" alt="Petrol Ofisi Logo">
+										</div>
+										<div class="carousel-item">
+											<img src="./img/a101-.jpg" alt="A-101 Logo">
+										</div>
+										<!-- <div class="carousel-item">
+								<img src="./img/" alt="Firma Logosu 5">
+							</div>
+							<div class="carousel-item">
+								<img src="logo-6.png" alt="Firma Logosu 6">
+							</div>
+							<div class="carousel-item">
+								<img src="logo-7.png" alt="Firma Logosu 7">
+							</div>
+							<div class="carousel-item">
+								<img src="logo-8.png" alt="Firma Logosu 8">
+							</div>
+							<div class="carousel-item">
+								<img src="logo-9.png" alt="Firma Logosu 9">
+							</div>
+							<div class="carousel-item">
+								<img src="logo-10.png" alt="Firma Logosu 10">
+							</div> -->
+									</div>
+								</div>
 							</div>
 							<!-- /Row -->
 						</div>
@@ -970,6 +1053,45 @@
   ]
 }
 </script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const carouselTrack = document.querySelector('.carousel-track');
+			const carouselItems = Array.from(carouselTrack.children);
+			const totalItems = carouselItems.length;
+			let currentIndex = 0;
+
+			// Sonsuz döngü için logoları kopyala
+			carouselItems.forEach(item => {
+				const clone = item.cloneNode(true);
+				carouselTrack.appendChild(clone);
+			});
+
+			function moveCarousel() {
+				// Her 3 saniyede bir, bir sonraki logoya geçiş yap
+				currentIndex++;
+
+				// Her geçişin genişliği responsive olarak ayarlanıyor
+				const itemWidth = carouselItems[0].offsetWidth;
+				const transformValue = -currentIndex * itemWidth;
+
+				carouselTrack.style.transition = 'transform 1s ease-in-out';
+				carouselTrack.style.transform = `translateX(${transformValue}px)`;
+
+				// Son logoya ulaşıldığında başa dönme işlemi
+				if (currentIndex >= totalItems) {
+					setTimeout(() => {
+						carouselTrack.style.transition = 'none';
+						carouselTrack.style.transform = `translateX(0)`;
+						currentIndex = 0;
+					}, 1000); // 1 saniye sonra (geçiş süresiyle aynı) geçişi sıfırla
+				}
+			}
+
+			// Otomatik geçişi başlat
+			setInterval(moveCarousel, 3000); // 3000ms = 3 saniyede bir geçiş
+		});
+	</script>
+
 </body>
 
 </html>
