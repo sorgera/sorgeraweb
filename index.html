@@ -867,5 +867,43 @@
 		setInterval(moveCarousel, 3000); // 3000ms = 3 saniyede bir geçiş
 	});
 </script>
+<script>
+// Cookie set etme
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Cookie alma
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(cname) == 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Sayfa açıldığında kontrol et
+window.onload = function() {
+    if (getCookie("cookiesAccepted") === "true") {
+        document.getElementById("gdpr-box").style.display = "none";
+    } else {
+        document.getElementById("gdpr-box").style.display = "block";
+    }
+};
+
+// Butona tıklandığında cookie yaz
+document.getElementById("hide").addEventListener("click", function() {
+    setCookie("cookiesAccepted", "true", 365); // 1 yıl geçerli
+    document.getElementById("gdpr-box").style.display = "none";
+});
+</script>
 
 </html>
