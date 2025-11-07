@@ -2016,3 +2016,70 @@ header {
     opacity: .5;
     background: #111111;
 }
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px; /* Dokunulabilir boyut */
+    margin: 4px;
+    text-decoration: none;
+    border-radius: 8px; /* Yumuşak köşeler */
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.4s ease; /* Yumuşak animasyon */
+    border: none;
+    position: relative; /* Glow ve overlay için */
+    overflow: hidden; /* Parlama efekti */
+    box-shadow: 0 4px 12px rgba(189, 47, 44, 0.15); /* Hafif kırmızı gölge */
+}
+ 
+/* Glow Pulse Animasyonu (tüm butonlara – yavaş atma) */
+@keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 4px 12px rgba(189, 47, 44, 0.15); }
+    50% { box-shadow: 0 4px 20px rgba(189, 47, 44, 0.3); } /* Kırmızı parlama */
+}
+ 
+.download-btn {
+    animation: glow-pulse 2s infinite; /* Sürekli hafif ışıltı */
+}
+ 
+/* XML: Beyaz arka + Kırmızı text */
+.download-btn.xml {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Beyaz gradient */
+    color: #bd2f2c; /* Marka kırmızısı */
+    border: 1px solid #bd2f2c; /* Kırmızı kenar */
+}
+ 
+.download-btn.xml:hover {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Hafif gri ton */
+    color: #a52727; /* Koyu kırmızı */
+    transform: translateY(-2px); /* Yukarı kalkma */
+    box-shadow: 0 6px 24px rgba(189, 47, 44, 0.4), 0 0 20px rgba(189, 47, 44, 0.2); /* Kırmızı glow */
+}
+ 
+/* PDF: Kırmızı arka + Beyaz text */
+.download-btn.pdf {
+    background: linear-gradient(135deg, #bd2f2c, #a52727); /* Marka kırmızı gradient */
+    color: white;
+}
+ 
+.download-btn.pdf:hover {
+    background: linear-gradient(135deg, #a52727, #8f2320); /* Koyu kırmızı */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(189, 47, 44, 0.5), 0 0 30px rgba(189, 47, 44, 0.3); /* Neon kırmızı glow */
+}
+ 
+/* Ekstra Işıltı: Hover'da ışık swipe efekti (kırmızı overlay) */
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); /* Beyaz parlama overlay */
+    transition: left 0.5s;
+}
+ 
+.download-btn:hover::before {
+    left: 100%; /* Üstünden ışık geçer */
+}
