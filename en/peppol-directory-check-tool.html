@@ -65,7 +65,24 @@
 
 		gtag('config', 'UA-37106447-2');
 	</script>
-
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("kmXKCRwUMeYaG-bsa");
+		})();
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				emailjs.sendForm('service_8do6h7t', 'template_r77a2fq', this)
+					.then(function () {
+						alert('Your message has been sent successfully!');
+						document.getElementById('contact-form').reset();
+					}, function (error) {
+						alert('An error occurred while sending the message: ' + JSON.stringify(error));
+					});
+			});
+		}
+	</script>
 </head>
 
 <body>
@@ -402,6 +419,8 @@
 								<div class="col-md-10 col-md-offset-1">
 									<form id="contact-form" class="contact-form">
 										<input type="text" class="input" name="name" placeholder="Company Name"
+											required>
+										<input type="text" class="input" name="muhatap" placeholder="Contact Person"
 											required>
 										<input type="email" class="input" name="email" placeholder="E-mail Address"
 											required>
