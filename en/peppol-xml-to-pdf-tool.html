@@ -57,32 +57,33 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37106447-2"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17144434454"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'UA-37106447-2');
+        gtag('config', 'AW-17144434454');
     </script>
-    	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-	<script type="text/javascript">
-		(function () {
-			emailjs.init("kmXKCRwUMeYaG-bsa");
-		})();
-		window.onload = function () {
-			document.getElementById('contact-form').addEventListener('submit', function (event) {
-				event.preventDefault();
-				emailjs.sendForm('service_8do6h7t', 'template_r77a2fq', this)
-					.then(function () {
-						alert('Your message has been sent successfully!');
-						document.getElementById('contact-form').reset();
-					}, function (error) {
-						alert('An error occurred while sending the message: ' + JSON.stringify(error));
-					});
-			});
-		}
-	</script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("kmXKCRwUMeYaG-bsa");
+        })();
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_8do6h7t', 'template_r77a2fq', this)
+                    .then(function () {
+                        alert('Your message has been sent successfully!');
+                        document.getElementById('contact-form').reset();
+                    }, function (error) {
+                        alert('An error occurred while sending the message: ' + JSON.stringify(error));
+                    });
+            });
+        }
+    </script>
     <style>
         .table td,
         .table th {
@@ -439,7 +440,7 @@
                                         <input type="text" class="input" name="name" placeholder="Company Name"
                                             required>
                                         <input type="text" class="input" name="muhatap" placeholder="Contact Person"
-											required>
+                                            required>
                                         <input type="email" class="input" name="email" placeholder="E-mail Address"
                                             required>
                                         <input type="text" class="input" name="title" placeholder="Subject" required>
