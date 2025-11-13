@@ -321,5 +321,10 @@
     <loc>https://www.sorgera.com/en/peppol-xml-to-pdf-tool.html</loc>
     <lastmod>2020-11-02T15:24:47+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.sorgera.com/en/ksef-xml-to-pdf-tool.html</loc>
+    <lastmod>2020-11-02T15:24:47+00:00</lastmod>
+    <priority>0.80</priority>
   </url>  
 </urlset>
