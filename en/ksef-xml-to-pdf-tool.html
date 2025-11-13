@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Sorgera Consultancy - Peppol XML to PDF Tool</title>
+    <title>Sorgera Consultancy - KSeF XML to PDF Tool</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -43,7 +43,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta name="description"
-        content="Sorgera XML to PDF Converter Tool – a secure, web-based solution for converting structured XML files into professional PDF documents. Fully optimized for e-Invoicing, Peppol, SAP, and ERP systems with complete GDPR-compliant data privacy." />
+        content="Sorgera XML to PDF Converter Tool – a secure, web-based solution for converting structured XML files into professional PDF documents. Fully optimized for e-Invoicing, KSeF, SAP, and ERP systems with complete GDPR-compliant data privacy." />
     <meta content="Sorgera" name="author" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -89,6 +89,69 @@
         .table th {
             text-align: center;
             vertical-align: middle;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #FAFAFA 0%, #F4F4F4 100%);
+            border: 1px solid #EEE;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(189, 47, 44, 0.15);
+            border-color: #bd2f2c;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            color: #bd2f2c;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 {
+            color: #10161A;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #868F9B;
+            font-size: 0.95em;
+            flex-grow: 1;
+        }
+
+        .privacy-card {
+            background: #FAFAFA;
+            border: 1px solid #EEE;
+            border-left: 4px solid #bd2f2c;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .privacy-card:hover {
+            box-shadow: 0 4px 15px rgba(189, 47, 44, 0.1);
+            background: #F4F4F4;
+        }
+
+        .privacy-card strong {
+            color: #bd2f2c;
         }
     </style>
 </head>
@@ -186,6 +249,13 @@
                                             (GEKAP)</a></li>
                                 </ul>
                             </li>
+                            <li class="has-dropdown">
+                                <a>Reporting Solutions</a>
+                                <ul class="dropdown">
+                                    <li><a href="project-management-tool.html">Project Management Tool</a></li>
+                                    <li><a href="ifrs-solutions.html">IFRS Solutions Package</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="index.html#about">Who We Are?</a></li>
@@ -201,10 +271,10 @@
         <!-- header wrapper -->
         <div class="header-wrapper smx-padding bg-red">
             <div class="container">
-                <h2>Peppol XML to PDF Tool</h2>
+                <h2>KSeF XML to PDF Tool</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#products" style="color:#FFF;">Our Services</a></li>
-                    <li class="breadcrumb-item active">Peppol XML to PDF Tool</li>
+                    <li class="breadcrumb-item active">KSeF XML to PDF Tool</li>
                 </ul>
             </div>
         </div>
@@ -225,38 +295,64 @@
                 <main id="main" class="col-md-9">
                     <div class="blog" itemscope itemtype="https://schema.org/SoftwareApplication">
                         <div class="blog-content">
-                            <h1 itemprop="name">Peppol XML to PDF Tool</h1>
+                            <h1 itemprop="name">KSeF XML to PDF Tool</h1>
                             <meta itemprop="applicationCategory" content="File Conversion Tool">
                             <meta itemprop="operatingSystem" content="Web-based">
                             <div class="blog-img">
-                                <img class="img-responsive" src="../img/Peppol XML to PDF Tool.png"
+                                <img class="img-responsive" src="../img/KSeF_XML2PDF_Tool.png"
                                     alt="XML to PDF Converter Tool" itemprop="image">
                             </div>
 
                             <p class="smx-padding" itemprop="description">
-                                <strong>Peppol XML to PDF Tool</strong> is a secure and efficient web-based tool that
+                                <strong>KSeF XML to PDF Tool</strong> is a secure and efficient web-based tool that
                                 instantly converts structured <strong>XML files</strong> into professional <strong>PDF
                                     documents</strong>.
-                                The converter is fully optimized for <strong>e-Invoicing</strong>, <strong>ERP</strong>,
-                                and <strong>SAP workflows</strong>, providing accurate document generation with complete
+                                The converter is fully optimized for <strong>e-Invoicing</strong>,
+                                <strong>KSeF</strong>,
+                                <strong>ERP</strong>, and <strong>SAP workflows</strong> in the Polish market, providing
+                                accurate document generation with complete
                                 data privacy.
                             </p>
 
                             <h2>Why Choose Our XML to PDF Converter?</h2>
                             <p>
                                 This tool helps businesses and developers who need to visualize structured legal XML
-                                data such
-                                as BIS 3.0 UBL Invoices and Credit Notes.
+                                data such as KSeF VAT Invoices and Corrections.
                                 It ensures reliable formatting and presentation, making XML data readable, shareable,
-                                Sorgera Peppol to PDF covers 100% of the fields in XML.
+                                and compliant with Polish e-invoicing regulations. Sorgera KSeF to PDF covers 100% of
+                                the fields in XML.
                             </p>
 
                             <h2>Key Features</h2>
-                            <ul>
-                                <li>High-quality and accurate <strong>PDF output</strong></li>
-                                <li>Supports <strong>UBL</strong> and <strong>e-Invoicing XML standards</strong></li>
-                                <li>Optimized for <strong>SAP</strong> systems</li>
-                            </ul>
+                            <div class="row">
+                                <div class="col-12 col-md-12">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-file-pdf-o"></i>
+                                        </div>
+                                        <h4>High-quality PDF Output</h4>
+                                        <p>Professional, print-ready documents with precise layouts.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-code"></i>
+                                        </div>
+                                        <h4>KSeF XML Standards</h4>
+                                        <p>Supports KSeF-specific XML formats for VAT invoices and corrections.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-cogs"></i>
+                                        </div>
+                                        <h4>SAP Optimization</h4>
+                                        <p>Seamless integration with SAP and ERP systems for Polish compliance.</p>
+                                    </div>
+                                </div>
+                            </div>
                             <br />
                             <h2>Privacy & Data Processing</h2>
                             <p>
@@ -265,50 +361,39 @@
                                 Your XML and PDF files are processed securely in memory and permanently deleted once the
                                 conversion is complete.
                             </p>
-                            <ul>
-                                <li><strong>No Data Storage:</strong> Files are never written to disk or databases.</li>
-                                <li><strong>GDPR Compliant:</strong> Fully aligned with European privacy regulations.
-                                </li>
-                                <li><strong>Stateless Processing:</strong> Each request is isolated and securely cleared
-                                    after execution.</li>
-                                <li><strong>Secure Infrastructure:</strong> Built on <strong>SOC 2–certified</strong>
-                                    cloud systems.</li>
-                                <li><strong>Immediate Erasure:</strong> All temporary data is deleted once PDFs are
-                                    delivered.</li>
-                            </ul>
-                            <br />
-                            <h2>Technology Stack</h2>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Component</th>
-                                        <th>Purpose</th>
-                                        <th>Security & Handling</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Next.js API</strong></td>
-                                        <td>Handles XML to PDF conversion requests</td>
-                                        <td>In-memory, stateless processing</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SaxonJS</strong></td>
-                                        <td>Transforms XML into structured HTML</td>
-                                        <td>No persistent data storage</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Puppeteer</strong></td>
-                                        <td>Renders HTML into high-quality PDF</td>
-                                        <td>Memory-only rendering environment</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Edge Functions</strong></td>
-                                        <td>Executes conversion in isolated serverless mode</td>
-                                        <td>SOC 2–certified architecture</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="row">
+                                <div class="col-12 col-md-12">
+                                    <div class="privacy-card">
+                                        <strong>No Data Storage:</strong> Files are never written to disk or databases.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="privacy-card">
+                                        <strong>GDPR Compliant:</strong> Fully aligned with European privacy
+                                        regulations.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="privacy-card">
+                                        <strong>Stateless Processing:</strong> Each request is isolated and securely
+                                        cleared
+                                        after execution.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="privacy-card">
+                                        <strong>Secure Infrastructure:</strong> Built on <strong>SOC
+                                            2–certified</strong>
+                                        cloud systems.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="privacy-card">
+                                        <strong>Immediate Erasure:</strong> All temporary data is deleted once PDFs are
+                                        delivered.
+                                    </div>
+                                </div>
+                            </div>
                             <br />
                             <h2>Privacy First Commitment</h2>
                             <p>
@@ -331,50 +416,34 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Base Example</td>
+                                    <td>FA3 Sample 1</td>
                                     <td>
-                                        <a href="../data/base-example.xml" target="_blank" class="download-btn xml">View
+                                        <a href="../data/FA_3_Przykład_1.xml" target="_blank"
+                                            class="download-btn xml">View
                                             XML</a>
-                                        <a href="../data/base-example.pdf" target="_blank" class="download-btn pdf">View
+                                        <a href="../data/FA_3_Przykład_1.PDF" target="_blank"
+                                            class="download-btn pdf">View
                                             PDF</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Commercial Invoice Sample</td>
+                                    <td>FA3 Sample 2</td>
                                     <td>
-                                        <a href="../data/Commercial_invoice_sample.xml" target="_blank"
+                                        <a href="../data/FA_3_Przykład_10.xml" target="_blank"
                                             class="download-btn xml">View XML</a>
-                                        <a href="../data/Commercial_invoice_sample.pdf" target="_blank"
+                                        <a href="../data/FA_3_Przykład_10.PDF" target="_blank"
                                             class="download-btn pdf">View PDF</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Base Credit Note</td>
+                                    <td>FA3 Sample 3</td>
                                     <td>
-                                        <a href="../data/base-creditnote.xml" target="_blank"
+                                        <a href="../data/FA_3_Przykład_25.xml" target="_blank"
                                             class="download-btn xml">View XML</a>
-                                        <a href="../data/base-creditnote.pdf" target="_blank"
+                                        <a href="../data/FA_3_Przykład_25.PDF" target="_blank"
                                             class="download-btn pdf">View PDF</a>
                                     </td>
                                 </tr>
-                                <!-- <tr>
-                                    <td>Allowance Example</td>
-                                    <td>
-                                        <a href="../data/Allowance-example.xml" target="_blank"
-                                            class="download-btn xml">View XML</a>
-                                        <a href="../data/Allowance-example.pdf" target="_blank"
-                                            class="download-btn pdf">View PDF</a>
-                                    </td>
-                                </tr> -->
-                                <!-- <tr>
-                                    <td>Sales Order Example</td>
-                                    <td>
-                                        <a href="../data/sales-order-example.xml" target="_blank"
-                                            class="download-btn xml">View XML</a>
-                                        <a href="../data/sales-order-example.pdf" target="_blank"
-                                            class="download-btn pdf">View PDF</a>
-                                    </td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -477,8 +546,8 @@
                             <a href="integration-and-system-architecture.html">Integration and System Architecture</a>
                             <a href="sap-business-technology-platform.html">SAP Business Technology Platform</a>
                             <a href="sap-edocument-aif.html">SAP eDocument - AIF</a>
+                            <a href="peppol-xml-to-pdf-tool.html">Peppol XML to PDF Tool</a>
                             <a href="peppol-directory-check-tool.html">Peppol Directory Check Tool</a>
-                            <a href="ksef-xml-to-pdf-tool.html">KSeF XML to PDF Tool</a>
                         </div>
                     </div>
                     <!-- /Category -->
@@ -490,12 +559,12 @@
                         <div class="widget-tags" role="list">
                             <a href="#" role="listitem">XML to PDF</a>
                             <a href="#" role="listitem">XML Converter</a>
-                            <a href="#" role="listitem">UBL Invoice</a>
+                            <a href="#" role="listitem">KSeF Invoice</a>
                             <a href="#" role="listitem">e-Invoice PDF</a>
-                            <a href="#" role="listitem">Peppol</a>
+                            <a href="#" role="listitem">KSeF</a>
                             <a href="#" role="listitem">SAP Integration</a>
                             <a href="#" role="listitem">ERP Solutions</a>
-                            <a href="#" role="listitem">Digital Transformation</a>
+                            <a href="#" role="listitem">Polish e-Invoicing</a>
                             <a href="#" role="listitem">Document Automation</a>
                         </div>
                     </div>
