@@ -46,6 +46,57 @@
 		name="description" />
 	<meta content="Sorgera" name="author" />
 
+
+	<style>
+		.carousel-container {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+		}
+
+		.carousel-track {
+			display: flex;
+			transition: transform 1s ease-in-out;
+		}
+
+		.carousel-item {
+			min-width: 25%;
+			/* Masaüstü: 4 logo */
+			box-sizing: border-box;
+			padding: 15px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.carousel-item img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			max-height: 80px;
+			object-fit: contain;
+		}
+
+		/* Tablet ve mobil cihazlar için responsive tasarım */
+
+		/* Tablet (768px ile 1024px arası ekranlar) */
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.carousel-item {
+				min-width: 33.3333%;
+				/* Tablet: 3 logo (100% / 3) */
+			}
+		}
+
+		/* Mobil cihazlar (768px ve altı) */
+		@media (max-width: 768px) {
+			.carousel-item {
+				min-width: 100%;
+				/* Mobil: 1 logo (100% / 1) */
+			}
+		}
+	</style>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		//Hide e-mail address
@@ -182,6 +233,7 @@
 					</li>
 					<li><a href="index.html#about">Who We Are?</a></li>
 					<li><a href="index.html#interaction">Interaction</a></li>
+					<li><a href="index.html#references">Our References</a></li>
 					<li><a href="index.html#contact">Contact Us</a></li>
 					<li><a href="../index.html">TR</a></li>
 				</ul>
@@ -232,7 +284,7 @@
 				<!-- /Section header -->
 
 				<!-- about -->
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="about">
 						<i class="fa fa-cogs"></i>
 						<h3>About Sorgera</h3>
@@ -244,7 +296,7 @@
 				<!-- /about -->
 
 				<!-- about -->
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="about">
 						<i class="fa fa-magic"></i>
 						<h3>Our Services</h3>
@@ -254,9 +306,18 @@
 					</div>
 				</div>
 				<!-- /about -->
+				<div class="col-md-3">
+					<div class="about">
+						<i class="fa fa-users"></i>
+						<h3>Our References</h3>
+						<p>We have proven our reliability and extensive experience by collaborating with many reputable
+							companies in the sector in which we have been operating for many years.</p>
+						<a href="#references">Read More</a>
+					</div>
+				</div>
 
 				<!-- about -->
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="about">
 						<i class="fa fa-mobile"></i>
 						<h3>Interaction</h3>
@@ -418,6 +479,62 @@
 
 	</div>
 	<!-- /Why Choose Us -->
+
+	<!-- Team -->
+	<div id="references" class="section md-padding">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<!-- Referanslarımız -->
+			<div class="row">
+				<div class="section-header text-center">
+					<h2 class="title">Our References</h2>
+				</div>
+				<div class="carousel-container">
+					<div class="carousel-track">
+						<!-- <div class="carousel-item">
+									<img src="../img/a101-.jpg" alt="A-101 Logo">
+								</div> -->
+						<div class="carousel-item">
+							<img src="../img/Arçelik_logo.svg.png" alt="Arçelik Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="../img/ford-logo.png" alt="Ford Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="../img/Gratis-logo-big.svg.png" alt="Gratis Logo">
+						</div>
+						<!-- <div class="carousel-item">
+									<img src="../img/hayat-logo.png" alt="Hayat Logo">
+								</div> -->
+						<div class="carousel-item">
+							<img src="../img/mavi-jeans-logo.jpg" alt="Mavi Jeans Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="../img/Mey_Diageo_Logo.jpg" alt="Mey Diageo Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="..	/img/Neapco-logo.png" alt="Neapco Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="../img/Otokar_logo.svg.png" alt="Otokar Logo">
+						</div>
+						<!-- <div class="carousel-item">
+									<img src="../img/özdilek-logo.png" alt="Özdilek Logo">
+								</div> -->
+						<div class="carousel-item">
+							<img src="../img/petrol-ofisi-logo.png" alt="Petrol Ofisi Logo">
+						</div>
+						<div class="carousel-item">
+							<img src="../img/TotalEnergies-Logo.png" alt="Total Energies Logo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Row -->
+	</div>
+
 
 	<!-- Team -->
 	<div id="interaction" class="section md-padding">
