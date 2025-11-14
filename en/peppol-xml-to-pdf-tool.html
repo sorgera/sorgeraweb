@@ -91,6 +91,55 @@
             vertical-align: middle;
         }
     </style>
+    <style>
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 25%;
+            /* Masaüstü: 4 logo */
+            box-sizing: border-box;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        /* Tablet ve mobil cihazlar için responsive tasarım */
+
+        /* Tablet (768px ile 1024px arası ekranlar) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .carousel-item {
+                min-width: 33.3333%;
+                /* Tablet: 3 logo (100% / 3) */
+            }
+        }
+
+        /* Mobil cihazlar (768px ve altı) */
+        @media (max-width: 768px) {
+            .carousel-item {
+                min-width: 100%;
+                /* Mobil: 1 logo (100% / 1) */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -247,7 +296,7 @@
                                 This tool helps businesses and developers who need to visualize structured legal XML
                                 data such
                                 as BIS 3.0 UBL Invoices and Credit Notes.
-                                It ensures reliable formatting and presentation, making XML data readable, shareable,
+                                It ensures reliable formatting and presentation, making XML data readable and shareable.
                                 Sorgera Peppol to PDF covers 100% of the fields in XML.
                             </p>
 
@@ -276,6 +325,9 @@
                                 <li><strong>Immediate Erasure:</strong> All temporary data is deleted once PDFs are
                                     delivered.</li>
                             </ul>
+                            <p><a href="https://services.sorgera.com/privacy" target="_blank" class="download-btn pdf"
+                                    style="display: inline-block; margin: 10px 0; padding: 8px 16px; font-size: 14px;">Read
+                                    Full Privacy Policy</a></p>
                             <br />
                             <h2>Technology Stack</h2>
                             <table class="table table-bordered">
@@ -293,13 +345,7 @@
                                         <td>In-memory, stateless processing</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>SaxonJS</strong></td>
-                                        <td>Transforms XML into structured HTML</td>
-                                        <td>No persistent data storage</td>
-                                    </tr>
-                                    <tr>
                                         <td><strong>Puppeteer</strong></td>
-                                        <td>Renders HTML into high-quality PDF</td>
                                         <td>Memory-only rendering environment</td>
                                     </tr>
                                     <tr>
@@ -377,17 +423,70 @@
                                 </tr> -->
                             </tbody>
                         </table>
-                        <!-- Final CTA - Moved to bottom, above demo -->
-                        <a href="https://services.sorgera.com/test-xml-to-pdf" target="_blank" class="download-btn pdf"
-                            style="display: block; margin: 50px auto 0; max-width: 250px; text-align: center; font-size: 18px; padding: 15px 40px; animation: glow-pulse 2s infinite; transition: all 0.3s ease; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(189, 47, 44, 0.3);">
-                            Try for Free
-                        </a>
+                        <!-- Final CTA - Updated links -->
+                        <div style="text-align: center; margin: 50px 0;">
+                            <a href="https://services.sorgera.com/" target="_blank" class="download-btn pdf"
+                                style="display: inline-block; margin: 10px; max-width: 250px; text-align: center; font-size: 18px; padding: 15px 40px; animation: glow-pulse 2s infinite; transition: all 0.3s ease; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(189, 47, 44, 0.3);">
+                                Try for Free
+                            </a>
+                            <a href="https://services.sorgera.com/pricing" target="_blank" class="download-btn pdf"
+                                style="display: inline-block; margin: 10px; max-width: 250px; text-align: center; font-size: 18px; padding: 15px 40px; animation: glow-pulse 2s infinite; transition: all 0.3s ease; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(189, 47, 44, 0.3);">
+                                View Pricing
+                            </a>
+                        </div>
                     </div>
                     <!-- Contact -->
                     <div id="contact" class="section col-md-12">
 
                         <!-- Container -->
                         <div class="container">
+                            <!-- Referanslarımız -->
+                            <div class="row">
+                                <div class="section-header text-center">
+                                    <h2 class="title">Our References</h2>
+                                </div>
+                                <div class="carousel-container">
+                                    <div class="carousel-track">
+                                        <!-- <div class="carousel-item">
+									<img src="../img/a101-.jpg" alt="A-101 Logo">
+								</div> -->
+                                        <div class="carousel-item">
+                                            <img src="../img/Arçelik_logo.svg.png" alt="Arçelik Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/ford-logo.png" alt="Ford Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/Gratis-logo-big.svg.png" alt="Gratis Logo">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+									<img src="../img/hayat-logo.png" alt="Hayat Logo">
+								</div> -->
+                                        <div class="carousel-item">
+                                            <img src="../img/mavi-jeans-logo.jpg" alt="Mavi Jeans Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/Mey_Diageo_Logo.jpg" alt="Mey Diageo Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="..	/img/Neapco-logo.png" alt="Neapco Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/Otokar_logo.svg.png" alt="Otokar Logo">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+									<img src="../img/özdilek-logo.png" alt="Özdilek Logo">
+								</div> -->
+                                        <div class="carousel-item">
+                                            <img src="../img/petrol-ofisi-logo.png" alt="Petrol Ofisi Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img/TotalEnergies-Logo.png" alt="Total Energies Logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
 
                             <!-- Row -->
                             <div class="row">
@@ -399,7 +498,7 @@
                                 <!-- /Section-header -->
 
                                 <!-- contact -->
-                                <div class="col-sm-4">
+                                <div class="col-sm-6">
                                     <div class="contact">
                                         <i class="fa fa-phone"></i>
                                         <h3>Phone Numbers</h3>
@@ -410,7 +509,7 @@
                                 <!-- /contact -->
 
                                 <!-- contact -->
-                                <div class="col-sm-3">
+                                <div class="col-sm-6">
                                     <div class="contact">
                                         <i class="fa fa-envelope"></i>
                                         <h3>E-Mail Address</h3>
@@ -423,20 +522,6 @@
                                 </div>
                                 <!-- /contact -->
                                 <!-- contact -->
-                                <div class="col-sm-4">
-                                    <div class="contact">
-                                        <i class="fa fa-map-marker"></i>
-                                        <h3>Address Information</h3>
-                                        <a href="https://www.google.com/maps/place/Sorgera+Yaz%C4%B1l%C4%B1m+Teknolojileri/@40.9799076,29.1258944,21z/data=!4m9!1m2!2m1!1sCanan+Business+K%C3%BC%C3%A7%C3%BCkbakkalk%C3%B6y+Mah.+Kocasinan+Cad.+Selvili+Sk.+No:4+Kat:11+Numara:73-74+Ata%C5%9Fehir,+%C4%B0stanbul!3m5!1s0x14cac7f4b967c807:0xd49a32aadc8c7aa8!8m2!3d40.9798164!4d29.1259856!16s%2Fg%2F11qmlcc4v7?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
-                                            target="_blank">
-                                            Canan Business Küçükbakkalköy Mah. Kocasinan Cad. Selvili Sk. No:4 Kat:11
-                                            Numara:73-74 Ataşehir, İstanbul
-                                        </a><br />
-                                        <!-- <p>Canan Business Küçükbakkalköy Mah. Kocasinan Cad. Selvili Sk. No:4 Kat:11
-											<br />Numara:73-74 Ataşehir, İstanbul
-										</p> -->
-                                    </div>
-                                </div>
                                 <!-- /contact -->
                                 <!-- contact form -->
                                 <div class="col-md-10 col-md-offset-1">
@@ -596,7 +681,45 @@
     <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="../js/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script>
+        // Logo Carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselTrack = document.querySelector('.carousel-track');
+            const carouselItems = Array.from(carouselTrack.children);
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
 
+            // Sonsuz döngü için logoları kopyala
+            carouselItems.forEach(item => {
+                const clone = item.cloneNode(true);
+                carouselTrack.appendChild(clone);
+            });
+
+            function moveCarousel() {
+                // Her 3 saniyede bir, bir sonraki logoya geçiş yap
+                currentIndex++;
+
+                // Her geçişin genişliği responsive olarak ayarlanıyor
+                const itemWidth = carouselItems[0].offsetWidth;
+                const transformValue = -currentIndex * itemWidth;
+
+                carouselTrack.style.transition = 'transform 1s ease-in-out';
+                carouselTrack.style.transform = `translateX(${transformValue}px)`;
+
+                // Son logoya ulaşıldığında başa dönme işlemi
+                if (currentIndex >= totalItems) {
+                    setTimeout(() => {
+                        carouselTrack.style.transition = 'none';
+                        carouselTrack.style.transform = `translateX(0)`;
+                        currentIndex = 0;
+                    }, 1000); // 1 saniye sonra (geçiş süresiyle aynı) geçişi sıfırla
+                }
+            }
+
+            // Otomatik geçişi başlat
+            setInterval(moveCarousel, 3000); // 3000ms = 3 saniyede bir geçiş
+        });
+    </script>
 </body>
 
 </html>
