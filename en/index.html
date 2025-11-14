@@ -827,6 +827,46 @@
 	<script type="text/javascript" src="../js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 
+	<script>
+		// Logo Carousel
+		document.addEventListener('DOMContentLoaded', function () {
+			const carouselTrack = document.querySelector('.carousel-track');
+			const carouselItems = Array.from(carouselTrack.children);
+			const totalItems = carouselItems.length;
+			let currentIndex = 0;
+
+			// Sonsuz döngü için logoları kopyala
+			carouselItems.forEach(item => {
+				const clone = item.cloneNode(true);
+				carouselTrack.appendChild(clone);
+			});
+
+			function moveCarousel() {
+				// Her 3 saniyede bir, bir sonraki logoya geçiş yap
+				currentIndex++;
+
+				// Her geçişin genişliği responsive olarak ayarlanıyor
+				const itemWidth = carouselItems[0].offsetWidth;
+				const transformValue = -currentIndex * itemWidth;
+
+				carouselTrack.style.transition = 'transform 1s ease-in-out';
+				carouselTrack.style.transform = `translateX(${transformValue}px)`;
+
+				// Son logoya ulaşıldığında başa dönme işlemi
+				if (currentIndex >= totalItems) {
+					setTimeout(() => {
+						carouselTrack.style.transition = 'none';
+						carouselTrack.style.transform = `translateX(0)`;
+						currentIndex = 0;
+					}, 1000); // 1 saniye sonra (geçiş süresiyle aynı) geçişi sıfırla
+				}
+			}
+
+			// Otomatik geçişi başlat
+			setInterval(moveCarousel, 3000); // 3000ms = 3 saniyede bir geçiş
+		});
+	</script>
+
 </body>
 
 </html>
