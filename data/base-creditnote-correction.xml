@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -105,10 +106,10 @@
         <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
         <cbc:PaymentID>Snippet1</cbc:PaymentID>
         <cac:PayeeFinancialAccount>
-            <cbc:ID>IBAN324239401123</cbc:ID>
+            <cbc:ID>IBAN32423940</cbc:ID>
             <cbc:Name>AccountName</cbc:Name>
             <cac:FinancialInstitutionBranch>
-                <cbc:ID>BIC32409sss8</cbc:ID>
+                <cbc:ID>BIC324098</cbc:ID>
             </cac:FinancialInstitutionBranch>
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
